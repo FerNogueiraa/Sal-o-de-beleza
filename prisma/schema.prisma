@@ -24,4 +24,13 @@ model Cliente {
   telefone     String
 }
 
+model Funcionario {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  nome         String
+  usuario      String   @unique
+  senha        String
+  endereco     String
+  cpf          String   @unique
+  telefone     String
+}
 
