@@ -1,4 +1,3 @@
-import { PrismaClient } from '@prisma/client';
 import { Router } from 'express';
 import clienteController from '../controllers/clienteController.js';
 

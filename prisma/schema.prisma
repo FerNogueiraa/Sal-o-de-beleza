@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,15 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Cliente {
-  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
   nome         String
-  usuario      String   @unique
+  usuario      String         @unique
   senha        String
   endereco     String
-  cpf          String   @unique
+  cpf          String         @unique
   telefone     String
+  agendamentos Agendamento[]  
 }
 
 model Funcionario {
@@ -34,3 +28,19 @@ model Funcionario {
   telefone     String
 }
 
+model Servico {
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  nome         String
+  valor        Float
+  agendamentos Agendamento[]  
+}
+
+model Agendamento {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  data      String
+  horario   String
+  cliente   Cliente  @relation(fields: [idCliente], references: [id])
+  idCliente String
+  servico   Servico  @relation(fields: [idServico], references: [id])
+  idServico String
+}
