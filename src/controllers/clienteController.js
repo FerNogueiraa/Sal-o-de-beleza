@@ -25,13 +25,27 @@ const clienteController = {
     },
     listarClientes: async (req, res) => {
         try {
-          const clientes = await prisma.cliente.findMany();
+          const clientes = await prisma.Cliente.findMany();
           res.status(200).json(clientes);
         } catch (error) {
           console.error('Erro ao listar clientes:', error);
           res.status(500).json({ error: 'Erro ao listar clientes', details: error.message });
         }
+      },
+      deletarCliente: async (req, res) => {
+        try{
+            const { id } = req.params;
+            const deletarCliente = await prisma.Cliente.delete({
+                where: {
+                    id: id,
+                },
+            });
+            res.status(200).json(deletarCliente);
+        } catch(error){
+          console.error('Erro ao deletar cliente:', error);
+          res.status(500).json({ error: 'Erro ao deletar cliente', details: error.message });
+        }
       }
-    }
+      } 
 
 export default clienteController
