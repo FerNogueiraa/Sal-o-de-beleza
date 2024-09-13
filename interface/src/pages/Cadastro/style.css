@@ -26,8 +26,51 @@ h1{
 form{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   padding: 30px;
   border-radius: 15px;
-  background-color: ;
+  background-color:#363653 ;
+  max-width: 50%;
+  width: 400px;
+  margin-bottom: 20px;
+
+  & button{
+    border-radius: 30px;
+  }
+  & button:hover{
+    opacity: 0.8;
+  }
+  & input{
+    border: 1px solid #48456c;
+    border-radius: 30px;
+    height: 40px;
+    background-color: #363653;
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+
+  }
+}
+
+.card{
+  display: flex;
+  justify-content: space-between;
+  background-color: #363653 ;
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  border-radius: 10px;
+
+  & p{
+    color: white;
+    font-weight: bold;
+  }
+
+  & button{
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+  }
+
 }
