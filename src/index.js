@@ -3,11 +3,13 @@ import clienteRouter from './routes/clienteRouter.js';
 import funcionarioRouter from './routes/funcionarioRouter.js';
 import servicoRouter from './routes/servicoRouter.js';
 import agendamentoRouter from './routes/agendamentoRouter.js';
+import cors from 'cors';
+
 
 const app = express();
 
 app.use(express.json());
-
+app.use(cors())
 //rotas
 app.use('/cliente', clienteRouter);
 app.use('/funcionario', funcionarioRouter);
@@ -18,3 +20,4 @@ app.use('/agendamento', agendamentoRouter);
 app.listen(3000, () => {
   console.log('Server started on http://localhost:3000');
 });
+
