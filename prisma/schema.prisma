@@ -12,8 +12,6 @@ model Cliente {
   nome         String
   usuario      String         @unique
   senha        String
-  endereco     String?
-  cpf          String?         
   telefone     String
   agendamentos Agendamento[]  
 }

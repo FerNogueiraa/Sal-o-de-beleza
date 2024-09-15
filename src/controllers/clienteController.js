@@ -11,8 +11,6 @@ const clienteController = {
                 nome: req.body.nome,
                 usuario: req.body.usuario,
                 senha: req.body.senha,
-                endereco: req.body.endereco,
-                cpf: req.body.cpf,
                 telefone: req.body.telefone
               }
             });
