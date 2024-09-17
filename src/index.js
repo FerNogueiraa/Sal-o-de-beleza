@@ -1,23 +1,24 @@
 import express from 'express';
-import clienteRouter from './routes/clienteRouter.js';
-import funcionarioRouter from './routes/funcionarioRouter.js';
-import servicoRouter from './routes/servicoRouter.js';
-import agendamentoRouter from './routes/agendamentoRouter.js';
+import dotenv from 'dotenv';
+import publicRoutes from './routes/publicRoutes.js';
+import protectedRoutes from './routes/protectedRoutes.js';
 import cors from 'cors';
 
+dotenv.config();
 
 const app = express();
 
 app.use(express.json());
+
 app.use(cors())
-//rotas
-app.use('/cliente', clienteRouter);
-app.use('/funcionario', funcionarioRouter);
-app.use('/servico', servicoRouter);
-app.use('/agendamento', agendamentoRouter);
+
+
+//rotas Publica
+app.use('/api', publicRoutes);
+//rotas protegidas
+app.use('/api', protectedRoutes);
 
 
 app.listen(3000, () => {
   console.log('Server started on http://localhost:3000');
 });
-

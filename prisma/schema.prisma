@@ -40,5 +40,5 @@ model Agendamento {
   cliente   Cliente  @relation(fields: [idCliente], references: [id])
   idCliente String
   servico   Servico  @relation(fields: [idServico], references: [id])
-  idServico String
+  idServico String @db.ObjectId
 }
