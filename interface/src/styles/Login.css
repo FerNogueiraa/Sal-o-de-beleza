@@ -10,7 +10,7 @@
     font-size: 14px;
 }
 
-.btn-login{
+.btn-login, .btn-logout{
     border: 2px solid #BF335D;
     width: 100px;
     height: 40px;

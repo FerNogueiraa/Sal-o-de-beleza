@@ -21,7 +21,7 @@ export default function Cadastro() {
 
   async function createUser() {
     try {
-      await api.post('/cliente', {
+      await api.post('/api/cadastro', {
         nome: inputNome.current.value,
         usuario: inputUsuario.current.value,
         senha: inputSenha.current.value,

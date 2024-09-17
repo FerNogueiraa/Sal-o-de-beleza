@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from '../contexts/AuthContext';
 import api from "../services/api";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
@@ -13,6 +14,7 @@ function Login() {
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleUsuarioChange = (e) => {
     setUsuario(e.target.value);
@@ -45,10 +47,8 @@ function Login() {
         clienteIdRecebido: !!response.data.clienteId
       });
       
-      localStorage.setItem('token', response.data.token);
+      login(response.data.token);
       localStorage.setItem('userId', response.data.clienteId);
-      
-      api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
       
       console.log("Redirecionando para a página de Agendamento...");
       navigate('/Agendamento');

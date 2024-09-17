@@ -47,3 +47,12 @@ align-items: center;
     display: flex;
     align-items: center;
 }
+.btn-agendar{
+    border: 2px solid #BF335D;
+    width: 100px;
+    height: 40px;
+    background-color: #751f39;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
