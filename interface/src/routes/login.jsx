@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 import Footer from "../components/footer";
-import { Input } from "../components/input";
 import { Link } from "react-router-dom";
 import Modal from "../components/modal";
 import Nav from "../components/nav";
@@ -16,12 +15,10 @@ function Login() {
   const navigate = useNavigate();
 
   const handleUsuarioChange = (e) => {
-    console.log("Usuário mudou:", e.target.value);
     setUsuario(e.target.value);
   };
 
   const handleSenhaChange = (e) => {
-    console.log("Senha mudou:", e.target.value);
     setSenha(e.target.value);
   };
 
@@ -29,26 +26,41 @@ function Login() {
     e.preventDefault();
     setError("");
 
-    console.log("Tentando login com:", { usuario, senha });
+    console.log("Iniciando processo de login...");
+    console.log("Dados de login:", { usuario: usuario.length > 0 ? "preenchido" : "vazio", senha: senha.length > 0 ? "preenchida" : "vazia" });
 
     if (!usuario || !senha) {
+      console.log("Erro: Campos não preenchidos");
       setError("Por favor, preencha todos os campos.");
       return;
     }
 
     try {
+      console.log("Enviando requisição de login...");
       const response = await api.post('/api/login', { usuario, senha });
       
-      console.log('Resposta do servidor:', response.data);
+      console.log('Login bem-sucedido. Resposta do servidor:', {
+        status: response.status,
+        tokenRecebido: !!response.data.token,
+        clienteIdRecebido: !!response.data.clienteId
+      });
       
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('userId', response.data.clienteId);
       
       api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
       
-      navigate('/agendamentos');
+      console.log("Redirecionando para a página de Agendamento...");
+      navigate('/Agendamento');
     } catch (error) {
-      console.error('Erro no login:', error.response || error);
+      console.error('Erro durante o processo de login:', {
+        mensagem: error.message,
+        resposta: error.response ? {
+          status: error.response.status,
+          data: error.response.data
+        } : 'Sem resposta do servidor',
+        request: error.request ? 'Requisição enviada, mas sem resposta' : 'Erro antes do envio da requisição'
+      });
       
       if (error.response) {
         setError(error.response.data.error || 'Falha no login. Tente novamente.');
@@ -67,18 +79,20 @@ function Login() {
         <h1>Login</h1>
         <label>
           Usuário:
-          <Input 
+          <input 
             type="text" 
             value={usuario} 
             onChange={handleUsuarioChange}
+            className="input"
           />
         </label>
         <label>
           Senha:
-          <Input 
+          <input 
             type="password" 
             value={senha} 
             onChange={handleSenhaChange}
+            className="input"
           />
         </label>
         {error && <p className="error-message">{error}</p>}
