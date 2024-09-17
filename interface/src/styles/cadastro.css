@@ -1,0 +1,35 @@
+.content-cadastro{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between ;
+    height: 100vh;
+    gap: 80px;
+}
+.btn-cadastro{
+    border: 2px solid #BF335D;
+    width: 100px;
+    height: 40px;
+    background-color: #751f39;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.input {
+    flex: 1;
+    background-color: #FFFF;
+    border-radius: 15px;
+    padding: 0 15px 0 15px;
+    display: flex;
+    border: 0 none;
+    height: 30px;
+    width: 100%;
+}
+
+ 
+.input:focus{
+    border: 0 none;
+    outline: 0;
+}

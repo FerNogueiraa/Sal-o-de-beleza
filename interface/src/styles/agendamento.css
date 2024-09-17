@@ -1,0 +1,49 @@
+.forms-select{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.forms-select input{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+
+}
+
+.forms-select select{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+.forms-select button{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+.content-label{
+display: flex;
+width: 100%;
+}
+
+.total{ 
+    padding: 0 20px 0 20px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    width: min-content;
+    background-color: #FFFF;
+    color: black;
+display: flex;
+align-items: center;
+}
+
+.label-total{
+    display: flex;
+    align-items: center;
+}

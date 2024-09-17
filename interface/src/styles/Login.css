@@ -1,0 +1,21 @@
+.content-cadastro{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.content-cadastro a{
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.btn-login{
+    border: 2px solid #BF335D;
+    width: 100px;
+    height: 40px;
+    background-color: #751f39;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

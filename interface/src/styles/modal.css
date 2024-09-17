@@ -1,0 +1,44 @@
+.content-modal{
+ background-color: #BF335D;
+ padding: 0 30px 0 30px;
+ border-top-left-radius: 45px;
+ border-top-right-radius: 25px;
+ border-bottom-left-radius: 25px;
+ border-bottom-right-radius: 45px;
+}
+
+.content-modal h1{
+    color: #Ffff;
+    margin-bottom: 10px;
+}
+
+form label {
+    color: #Ffff;   
+}
+
+form{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.forms{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+.content-image{
+    display: flex;
+    bottom: 0;
+    max-width: max-content;
+    height: 100%;
+    padding: 20% 0 0 0;
+
+}
+
+.image-women{
+    width: 250px;
+}
