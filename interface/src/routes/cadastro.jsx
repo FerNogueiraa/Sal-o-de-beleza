@@ -33,9 +33,6 @@ export default function Cadastro() {
     }
   }
 
-
-
-
   //Front End
   return (
     <div className="content-cadastro">

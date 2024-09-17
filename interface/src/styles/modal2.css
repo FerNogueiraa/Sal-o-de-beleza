@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rufina:wght@400;700&display=swap');
 .content-modal2{
     background-color: #BF335D;
-    padding: 0 100px 0 800px;
+    padding: 0 100px 0 850px;
     border-top-left-radius: 55px;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
@@ -66,6 +66,7 @@
     color: #D7B39F;
     font-family: roboto slab;
     font-size: 40px;
+    margin-top: 50px;
    }
 
    .servicomenor{
@@ -77,25 +78,29 @@
 
    .divservicos{
     display: inline-block;
-    width: 1500px;
-    padding: 200px;
+    width: 1600px;
+    padding: 100px;
+    margin-top: -100px;
    }
 
    .imagem-limpeza{
     width: 344.2px;
     margin-top: -190px;
     border:solid #D7B39F;
+    margin: 0 15px; /* Adiciona espaçamento entre as imagens */
    }
 
    .imagem-micro{
     width: 345px;
     margin-top: -190px;
     border:solid #D7B39F;
+    margin: 0 15px; /* Adiciona espaçamento entre as imagens */
    }
    .imagem-design{
     width: 344.2px;
     margin-top: -190px;
     border:solid #D7B39F;
+    margin: 0 15px; /* Adiciona espaçamento entre as imagens */
    }
 
    .div-nome{
@@ -106,7 +111,7 @@
     font-family: rufina;
     color:  #D7B39F;
     font-size: 22px;
-    margin-left: -680px;
+    margin-left: -750px;
    }
 
    .nome2{
@@ -120,8 +125,173 @@
     font-family: rufina;
     color: #D7B39F;
     font-size: 22px;
-    margin-left: 680px;
+    margin-left: 750px;
     margin-top: -27px;
    }
+
+   .Historia{
+    color: #D7B39F;
+    font-size: 40px;
+    font-family: roboto slab;
+    margin-top: 110px;
+   }
+
+   .div-historia{
+    background-color: #BF335D;
+    display: flex;
+    margin-top: 50px;
+    border-radius: 70px;
+   }
+
+   .imagem-historia{
+    width: 480px;
+    margin-left: 150px;
+   }
+
+   .escrita-historia{
+    font-family: rufina;
+    color: white;
+    font-size: 30px;
+    text-align: justify;
+    margin-right: 20px;
+   }
+
+   .div-menorescrita{
+    width: 570px;
+    height: 450px;
+    margin-top: 150px;
+    margin-left: 60px;
+   }
+
+   .feedback{
+    font-family: roboto slab;
+    font-size: 40px;
+    margin-top: 120px;
+    color: #D7B39F;
+   }
+
+   .reti1{
+    font-size: 80px;
+   }
+
+   .btn-agendar2{
+    border: 1px solid #FFFFFF;
+    width: 100px;
+    height: 50px;
+    background-color: #BF335D;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: rufina;
+    margin-left: -1200px;
+    margin-top: 50px;
+}
+
+.btn-agendar2:hover{
+    transform: scale(1.1); 
+    background-color: #BF335D;
+    transition: all 5ms;
+    cursor: pointer;
+}
+
+.div-feedback{
+    display:flex;
+    width: 1400px;
+    height: 220px;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 180px;
+   }
+   .divfeed1{
+    background-color: #BF335D;
+    width: 350px;
+    height: 220px;
+    font-family: rufina;
+    color: white;
+   }
+   .divfeed2{
+    background-color: #BF335D;
+    width: 350px;
+    height: 220px;
+   }
+   .divfeed3{
+    background-color: #BF335D;
+    width: 350px;
+    height: 220px;
+   }
+
+   .retis1{
+    margin-left: -280px;
+    font-size: 50px;
+   }
+
+   .karen{
+    margin-left: -45px;
+    margin-top: -30px;
+    font-family: rufina;
+   }
+
+   .karenfeed{
+    text-align: left;
+    font-family: rufina;
+    font-size: 18px;
+    margin-left: 16px;
+
+   }
    
+   .divkaren{
+    width: 280px;
+    height: 200px;
+    margin-top: 20px;
+   }
+
+   .retis2{
+    margin-left: -295px;
+    font-size: 50px;
+   }
+
+   .larissa{
+    margin-left: -150px;
+    margin-top: -30px;
+    font-family: rufina;
+   }
+
+   .larissafeed{
+    text-align: left;
+    font-family: rufina;
+    font-size: 18px;
+    margin-left: 16px;
+
+   }
+   
+   .divlarissa{
+    width: 280px;
+    height: 200px;
+    margin-top: 20px;
+   }
+
+   .retis3{
+    margin-left: -300px;
+    font-size: 50px;
+   }
+
+   .lucas{
+    margin-left: -170px;
+    margin-top: -30px;
+    font-family: rufina;
+   }
+
+   .lucasfeed{
+    text-align: left;
+    font-family: rufina;
+    font-size: 18px;
+    margin-left: 16px;
+
+   }
+   
+   .divlucas{
+    width: 280px;
+    height: 200px;
+    margin-top: 20px;
+   }
    
