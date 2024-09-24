@@ -2,7 +2,9 @@ import React from 'react';
 import "../styles/nav.css";
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import perfil from '../assets/perfil.png';
+import user from '../assets/user.png';
+import loginImage from '../assets/login.png'; // Import the login image
+import logoutimage from '../assets/logout.png';
 
 export default function Nav() {
   const { isLoggedIn, logout } = useAuth();
@@ -20,11 +22,13 @@ export default function Nav() {
         <span>
             {isLoggedIn ? (
                 <div className="user-menu">
-                    <img src={perfil} alt="Imagem do perfil" className='img-perfil'/>
-                    <button onClick={logout} className='btn-logout'>Sair</button>
+                    <img src={logoutimage} onClick={logout} className='login-button' />
+                    <img src={user} alt="Imagem do perfil" className='img-perfil'/>
                 </div>
             ) : (
-                <button className='btn-login'><Link to="/Login">Login</Link></button>
+                <Link to="/Login">
+                    <img src={loginImage} alt="Login Button" className='login-button' />
+                </Link>
             )}
         </span>
     </div>

@@ -1,39 +1,86 @@
-
-.nav{
+.nav {
     width: 100%;
     background-color: #BF335D;
     display: flex;
     justify-content: space-between;
-    padding-right:20px ;
+    padding: 10px 20px;
     align-items: center;
 }
 
 .title {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 32px;
     color: #FFFFFF;
 }
 
 .content-left {
     display: flex;
-    padding: 20px 20px 0 20px;
     align-items: center;
-    flex-direction: column;
+    gap: 30px;
 }
 
 .routes {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 60px;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     color: #FFFFFF;
-    font-weight: 100;
-    font-size: 16px;
-    margin-top: 35px;
+    font-weight: 300;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
-.btn-login{
+.routes a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.routes a:hover {
+    font-size: 20px;
+}
+
+.login-button {
+    width: 35px;
+    height: 35px;
+    translate: all 0.3s ease;
+}
+.login-button:hover {
+    transform: scale(1.1);
+}
+
+
+.img-perfil {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+    translate: all 0.3s ease;
+}
+
+.img-perfil:hover {
+    transform: scale(1.1);
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.btn-logout {
     border: 2px solid #BF335D;
     width: 80px;
     height: 40px;
@@ -41,30 +88,11 @@
     border-radius: 4px;
     text-transform: uppercase;
     color: #FFFFFF;
-}
-
-.btn-login:hover{
-    transform: scale(1.1); 
-    background-color: #BF335D;
-    transition: all 5ms;
     cursor: pointer;
-}
-.img-perfil{
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
-
-.user-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+.btn-logout:hover {
+    transform: scale(1.1);
+    background-color: #BF335D;
+}

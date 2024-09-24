@@ -12,13 +12,13 @@ export default function Footer() {
         <div className="media-social">
           <h3>Redes Sociais</h3>
           <div className="anchor-media">
-            <a href="https://www.facebook.com/sandra.wanderlindfrassetto" className="facebook"> 
+            <a href="https://www.facebook.com/sandra.wanderlindfrassetto" target='_blank' rel='noopener noreferrer' className="facebook"> 
               <FacebookOutlinedIcon />
             </a>
             <a className="whatssap">
               <WhatsAppIcon />
             </a>
-            <a href="https://www.instagram.com/sandra.sobrancelhas/" className="instagram">
+            <a href="https://www.instagram.com/sandra.sobrancelhas/" target='_blank' rel='noopener noreferrer' className="instagram">
               <Instagram />
             </a>
           </div>

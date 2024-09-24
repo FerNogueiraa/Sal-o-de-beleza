@@ -7,6 +7,7 @@ import womenImage from "../assets/women.png";
 import api from "../services/api";
 //Importando Hooks
 import { useRef, useState } from "react";
+import { useHref } from "react-router-dom";
 
 
 
@@ -28,6 +29,8 @@ export default function Cadastro() {
         telefone: inputTelefone.current.value
       })
       console.log("Cadastrado")
+      alert("Cadastrado com sucesso")
+      useHref("/Login")
     } catch (error) {
       console.log(error)
     }
