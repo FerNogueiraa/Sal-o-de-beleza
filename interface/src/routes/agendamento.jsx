@@ -3,22 +3,17 @@ import Nav from "../components/nav";
 import Footer from "../components/footer";
 import Modal from "../components/modal";
 import "../styles/agendamento.css";
-import womenImage from "../assets/women2.png";
 import api from "../services/api";
 import { useNavigate } from "react-router-dom";
+import CalendarioPopup from "../components/CalendarioPopup";
 
-const horariosDisponiveis = [
-  '09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00'
-];
 
 export default function Agendamento() {
   const [service, setService] = useState("");
   const [professional, setProfessional] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [payment, setPayment] = useState("");
+  const [selectedDateTime, setSelectedDateTime] = useState(null);
   const [total, setTotal] = useState(0);
-  const [horariosOcupados, setHorariosOcupados] = useState([]);
+  const [showCalendario, setShowCalendario] = useState(false);
   const [servicos, setServicos] = useState([]);
   const [profissionais, setProfissionais] = useState([]);
 
@@ -37,41 +32,50 @@ export default function Agendamento() {
   }, []);
 
   useEffect(() => {
-    if (date) {
-      api.get(`/api/agendamentos-por-data?data=${date}`)
-        .then(response => setHorariosOcupados(response.data))
-        .catch(error => console.error('Erro ao buscar horários ocupados:', error));
-    }
-  }, [date]);
-
-  useEffect(() => {
     const servicoSelecionado = servicos.find(s => s.id === service);
     setTotal(servicoSelecionado ? servicoSelecionado.valor : 0);
   }, [service, servicos]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await api.post('/api/agendamento', { 
-        data: date, 
-        horario: time, 
-        servicoId: service,
-        profissionalId: professional,
-        formaPagamento: payment
-      });
-      alert('Agendamento realizado com sucesso!');
-      setHorariosOcupados([...horariosOcupados, time]);
-      navigate('/dashboard');
-    } catch (error) {
-      alert('Erro ao realizar agendamento');
-      console.error('Erro ao criar agendamento:', error);
+
+    if (!selectedDateTime || !service || !professional) {
+      alert('Por favor, preencha todos os campos');
+      return;
     }
+
+    const agora = new Date();
+    if (selectedDateTime < agora) {
+      alert('Data e hora de agendamento inválido');
+      return;
+    }
+
+    try {
+      const response = await api.post('/api/agendamento', { 
+        data: selectedDateTime.toISOString().split('T')[0],
+        horario: selectedDateTime.toTimeString().slice(0, 5),
+        servicoId: service,
+        profissionalId: professional
+      });
+
+      console.log('Resposta do servidor:', response.data);
+      alert('Agendamento realizado com sucesso!');
+    } catch (error) {
+      console.error('Erro completo:', error);
+      console.error('Resposta do servidor:', error.response?.data);
+      alert(`Erro ao realizar agendamento: ${error.response?.data?.error || error.message}`);
+    }
+  };
+
+  const handleDateTimeSelect = (dateTime) => {
+    setSelectedDateTime(dateTime);
+    setShowCalendario(false);
   };
 
   return (
     <div className="content-cadastro">
       <Nav/>
-      <Modal image={womenImage} onSubmit={handleSubmit}>
+      <Modal  onSubmit={handleSubmit} className="content-modal">
         <h1>Agendamento</h1>
         <div className="forms-select">
           <label>
@@ -100,51 +104,30 @@ export default function Agendamento() {
             </select>
           </label>
 
-          <label>
-            Data:
-            <input
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-          </label>
-
-          <label>
-            Horário:
-            <select 
-              value={time} 
-              onChange={(e) => setTime(e.target.value)}
-            >
-              <option value="">Selecione um horário</option>
-              {horariosDisponiveis.map(h => (
-                !horariosOcupados.includes(h) && (
-                  <option key={h} value={h}>{h}</option>
-                )
-              ))}
-            </select>
-          </label>
-
-          <label>
-            Pagamento:
-            <select
-              value={payment}
-              onChange={(e) => setPayment(e.target.value)}
-            >
-              <option value="">Selecione uma forma de pagamento</option>
-              <option value="dinheiro">Dinheiro</option>
-              <option value="cartao">Cartão de Crédito</option>
-              <option value="pix">Pix</option>
-            </select>
-          </label>
+          <button className="btn-calendario" type="button" onClick={() => setShowCalendario(true)}>
+            Selecionar Data e Hora
+          </button>
+        
         </div>
         <div className="content-label">
           <label className="label-total">
             Total: <p>&nbsp;</p>
             <label className="total">R$ {total.toFixed(2)}</label>
+            {selectedDateTime && (
+            <p className="selected-date-time"> 
+              Agendamento: {selectedDateTime.toLocaleString()}
+            </p>
+          )}
           </label>
         </div>
         <button type="submit" className='btn-agendar'>Agendar</button>
       </Modal>
+      {showCalendario && (
+        <CalendarioPopup
+          onClose={() => setShowCalendario(false)}
+          onSelect={handleDateTimeSelect}
+        />
+      )}
       <div className="footer-position">
         <Footer />
       </div>
