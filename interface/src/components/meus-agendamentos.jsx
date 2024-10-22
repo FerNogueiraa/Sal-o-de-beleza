@@ -2,23 +2,28 @@ import React, { useState, useEffect } from 'react';
 import '../styles/meus-agendamentos.css';
 import { useAuth } from '../contexts/AuthContext';
 
+
 const MeusAgendamentos = ({ isOpen, onClose }) => {
   const [agendamentos, setAgendamentos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { user } = useAuth();
+  const  userId = localStorage.getItem('userId');
+  
+  if (!userId) {
+    return null;
+  }
 
-  useEffect(() => {
-    if (isOpen && user) {
-      fetchAgendamentos();
-    }
-  }, [isOpen, user]);
+  const formatarData = (dataString) => {
+    const data = new Date(dataString);
+    return data.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  };
 
+  
   const fetchAgendamentos = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`/api/agendamentos-cliente/${user.id}`, {
+      const response = await fetch(`http://localhost:3000/api/agendamentos-cliente/${userId}`, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}` // Adicione o token de autenticação
+          'Authorization': `Bearer ${localStorage.getItem('token')}` 
         }
       });
       if (!response.ok) {
@@ -32,6 +37,12 @@ const MeusAgendamentos = ({ isOpen, onClose }) => {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (isOpen && userId) {
+      fetchAgendamentos();
+    }
+  }, [isOpen, userId]);
 
 
   const handleOverlayClick = (e) => {
@@ -56,15 +67,13 @@ const MeusAgendamentos = ({ isOpen, onClose }) => {
             agendamentos.map((agendamento) => (
               <div key={agendamento.id} className="agendamento-card">
                 <div className="agendamento-data">
-                  <span className="data">{agendamento.data}</span>
+                <span className="data">{formatarData(agendamento.data)}</span>
                 </div>
                 <div className="agendamento-info">
                   <h3>{agendamento.servico}</h3>
                   <p>Horário: {agendamento.horario}</p>
                   <p>Profissional: {agendamento.profissional}</p>
-                  <span className={`status ${agendamento.status.toLowerCase()}`}>
-                    {agendamento.status}
-                  </span>
+                
                 </div>
               </div>
             ))
@@ -73,7 +82,6 @@ const MeusAgendamentos = ({ isOpen, onClose }) => {
           )}
         </div>
         <div className="modal-footer">
-          <button className="fechar-button" onClick={onClose}>Fechar</button>
         </div>
       </div>
     </div>

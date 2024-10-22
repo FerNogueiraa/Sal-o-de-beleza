@@ -41,7 +41,9 @@
   }
   
   .modal-body {
-    padding: 20px;
+    height: 400px; /* Altura fixa */
+    overflow-y: auto; /* Adiciona scroll vertical */
+    padding: 10px; /* Opcional: para dar um espaçamento interno */
   }
   
   .agendamento-card {
