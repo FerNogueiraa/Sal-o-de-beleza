@@ -24,6 +24,7 @@ model Funcionario {
   endereco     String
   cpf          String   @unique
   telefone     String
+  agendamento Agendamento[]
 }
 
 model Servico {
@@ -34,11 +35,13 @@ model Servico {
 }
 
 model Agendamento {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  data      String
-  horario   String
-  cliente   Cliente  @relation(fields: [idCliente], references: [id])
-  idCliente String
-  servico   Servico  @relation(fields: [idServico], references: [id])
-  idServico String @db.ObjectId
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  data           DateTime
+  horario        String
+  cliente        Cliente     @relation(fields: [idCliente], references: [id])
+  idCliente      String      @db.ObjectId
+  servico        Servico     @relation(fields: [idServico], references: [id])
+  idServico      String      @db.ObjectId
+  profissional   Funcionario @relation(fields: [idProfissional], references: [id])
+  idProfissional String      @db.ObjectId
 }

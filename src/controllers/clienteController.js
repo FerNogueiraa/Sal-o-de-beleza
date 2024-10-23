@@ -36,68 +36,7 @@ const clienteController = {
       console.error(error.stack);
       res.status(500).json({ error: 'Erro interno no servidor', details: error.message });
     }
-  },
-  criarAgendamento: async (req, res) => {
-    try {
-      const { data, horario, servicoId } = req.body;
-      const clienteId = req.userId; // Obtido do middleware de autenticação
-  
-      // Validação básica
-      if (!data || !horario || !servicoId) {
-        return res.status(400).json({ error: 'Data, horário e serviço são obrigatórios' });
-      }
-  
-      // Criar o agendamento
-      const agendamento = await prisma.Agendamento.create({
-        data: {
-          data: data,
-          horario: horario,
-          cliente: { connect: { id: clienteId } },
-          servico: { connect: { id: servicoId.toString() } } // Converte para string
-        }
-      });
-  
-      res.status(201).json(agendamento);
-    } catch (error) {
-      console.error('Erro ao criar agendamento:', error);
-      res.status(500).json({ error: 'Erro ao criar agendamento', details: error.message });
-    }
-  },
-  listarAgendamento: async (req, res) => {
-    try {
-      const clienteId = req.userId;
-
-      const agendamentos = await prisma.Agendamento.findMany({
-        where: { clienteId },
-        include: {
-          servico: true // Inclui os detalhes do serviço
-        },
-        orderBy: {
-          data: 'asc' // Ordena por data, do mais próximo ao mais distante
-        }
-      });
-
-      res.json(agendamentos);
-    } catch (error) {
-      console.error('Erro ao listar agendamentos:', error);
-      res.status(500).json({ error: 'Erro ao listar agendamentos' });
-    }
-  },
-  deletarCliente: async (req, res) => {
-    try {
-      const { id } = req.params;
-      const deletarCliente = await prisma.Cliente.delete({
-        where: {
-          id: id
-        }
-      });
-      res.status(200).json(deletarCliente);
-    } catch (error) {
-      console.error('Erro ao deletar cliente:', error);
-      res.status(500).json({ error: 'Erro ao deletar cliente' });
-    }
   }
-
 } 
 
 export default clienteController
