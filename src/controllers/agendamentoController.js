@@ -4,8 +4,6 @@ const prisma = new PrismaClient();
 
 const agendamentoController = {
   criarAgendamento: async (req, res) => {
-    console.log('Dados recebidos:', req.body);
-    console.log('ID do cliente:', req.userId);
   
     try {
       const { data, horario, servicoId, profissionalId } = req.body;
@@ -13,7 +11,6 @@ const agendamentoController = {
   
       // Validação dos dados de entrada
       if (!data || !horario || !servicoId || !profissionalId ||  !clienteId) {
-        console.log('Dados incompletos:', { data, horario, servicoId, profissionalId, clienteId });
         return res.status(400).json({ error: 'Dados incompletos para criar o agendamento' });
       }
   
@@ -74,10 +71,8 @@ const agendamentoController = {
         }
       });
   
-      console.log('Agendamento criado:', agendamento);
       res.status(201).json(agendamento);
     } catch (error) {
-      console.error('Erro detalhado ao criar agendamento:', error);
       if (error.code === 'P2002') {
         return res.status(400).json({ error: 'Conflito de agendamento. Horário pode já estar ocupado.' });
       }
@@ -136,11 +131,18 @@ const agendamentoController = {
   },
   listarAgendamentosPorCliente: async (req, res) => {
     try{
-      const { clienteId } = req.params;
+      const { id } = req.params;  
       const agendamentos = await prisma.agendamento.findMany({
-        where: { clienteId }
+       where: {
+        idCliente: id
+       }, 
+       include: {
+        servico: true,
+        profissional: true
+       }
       });
       res.json(agendamentos);
+      console.log(agendamentos)
     }catch(error){
       console.error('Erro ao contar agendamentos por cliente:', error);
       res.status(500).json({ error: 'Erro ao contar agendamentos por cliente', details: error.message });
