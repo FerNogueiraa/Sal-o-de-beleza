@@ -17,7 +17,6 @@ const MeusAgendamentos = ({ isOpen, onClose }) => {
     return data.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
   };
 
-  
   const fetchAgendamentos = async () => {
     setIsLoading(true);
     try {
@@ -70,9 +69,9 @@ const MeusAgendamentos = ({ isOpen, onClose }) => {
                 <span className="data">{formatarData(agendamento.data)}</span>
                 </div>
                 <div className="agendamento-info">
-                  <h3>{agendamento.servico}</h3>
+                  <h3>{agendamento.servico.nome}</h3>
                   <p>Horário: {agendamento.horario}</p>
-                  <p>Profissional: {agendamento.profissional}</p>
+                  <p>Profissional: {agendamento.profissional.nome}</p>
                 
                 </div>
               </div>

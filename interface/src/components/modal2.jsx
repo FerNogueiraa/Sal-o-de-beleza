@@ -10,7 +10,6 @@ import Agendamento from "../routes/agendamento";
 
 
 export default function Modal2({ children, image }) {
-  console.log("Imagem: ", image);
   return (
     <>
     
