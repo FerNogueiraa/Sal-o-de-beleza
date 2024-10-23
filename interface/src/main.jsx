@@ -9,6 +9,7 @@ import Home from './routes/home.jsx';
 import Login from './routes/login.jsx';
 import Cadastro from './routes/cadastro.jsx';
 import Agendamento from './routes/agendamento.jsx';
+import Agendamentoadm from './routes/agendamentoadm.jsx'
 import ErrorPage from './routes/ErrorPage.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "cadastro",
         element: <Cadastro/>,
+      },
+      {
+        path: "agendamentoadm",
+        element: <Agendamentoadm/>,
       },
       {
         element: <PrivateRoute />,

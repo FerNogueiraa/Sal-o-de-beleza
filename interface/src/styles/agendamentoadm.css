@@ -1,0 +1,77 @@
+.DivAgendamento {
+    width: 700px;
+    height: auto;
+    background-color: #BF335D;
+    border-radius: 40px;
+    margin-left: 24%;
+    padding: 20px;
+    position: relative;
+    margin-top: -35%;
+  }
+  
+  .date-filter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  .appointments-list {
+    margin-top: 80px;
+  }
+  
+  .appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+    transition: color 0.2s;
+  }
+  
+  .icon:hover {
+    color: #fff;
+  }
+  
+  .confirmed {
+    color: #4CAF50;
+  }
+  
+  .declined {
+    color: #F44336;
+  }
+  
+  .date-filter label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .date-filter input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .date-filter input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
