@@ -75,7 +75,7 @@ function Login() {
   return (
     <div className="content-cadastro">
       <Nav/>
-      <Modal image={womenImage} onSubmit={handleLogin}>
+      <Modal onSubmit={handleLogin}>
         <h1>Login</h1>
         <label>
           Usuário:

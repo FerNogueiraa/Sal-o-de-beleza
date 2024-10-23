@@ -1,70 +1,132 @@
-
-.nav{
-    width: 100%;
-    background-color: #BF335D;
-    display: flex;
-    justify-content: space-between;
-    padding-right:20px ;
-    align-items: center;
+.nav {
+  width: 100%;
+  background-color: #BF335D;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
 }
 
 .title {
-    font-weight: 400;
-    font-size: 40px;
-    color: #FFFFFF;
+  font-weight: 400;
+  font-size: 32px;
+  color: #FFFFFF;
 }
 
 .content-left {
-    display: flex;
-    padding: 20px 20px 0 20px;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .routes {
-    display: flex;
-    gap: 60px;
-    justify-content: space-between;
-    list-style: none;
-    color: #FFFFFF;
-    font-weight: 100;
-    font-size: 16px;
-    margin-top: 35px;
-    text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  list-style: none;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
-.btn-login{
-    border: 2px solid #BF335D;
-    width: 80px;
-    height: 40px;
-    background-color: #AF0135;
-    border-radius: 4px;
-    text-transform: uppercase;
-    color: #FFFFFF;
+.routes a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 24px;
+  font-weight: 500;
 }
 
-.btn-login:hover{
-    transform: scale(1.1); 
-    background-color: #BF335D;
-    transition: all 5ms;
-    cursor: pointer;
-}
-.img-perfil{
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    margin-right: 10px;
+.routes a:hover {
+  font-size: 20px;
 }
 
+.login-button p {
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+  font-weight: 300;
+}
+
+.login-button p:hover {
+  transform: scale(1.1);
+  font-size: 18px;
+}
 
 .user-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.img-perfil {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.img-perfil:hover {
+  transform: scale(1.1);
+}
+
+.popup-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid #BF335D;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.popup-item {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popup-item:hover {
+  background-color: #BF335D;
+  color: white;
+}
+
+/* Estilos para sobrescrever os padrões do reactjs-popup */
+.popup-content {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+
+/* Estilos adicionais que podem ser úteis */
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logout-button {
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  transform: scale(1.1);
+}

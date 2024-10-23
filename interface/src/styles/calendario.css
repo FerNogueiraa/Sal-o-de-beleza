@@ -1,0 +1,137 @@
+.calendario-popup {
+  position: fixed;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px 2px #BF335D;
+  z-index: 1000;
+}
+
+
+
+.calendario-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+}
+
+.cabecalho-calendario {
+  display: contents;
+}
+
+.cabecalho-calendario div {
+  text-align: center;
+  font-weight: bold;;
+}
+
+.dias-calendario {
+  display: contents;
+}
+
+.dia {
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+
+}
+
+.dia:hover {
+    background-color: #d73767;
+    color: white;
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.dia.selecionado {
+  background-color: #BF335D;
+  color: white;
+  border-radius: 10px;
+}
+
+.dia.vazio {
+  visibility: hidden;
+}
+
+.selecao-horario {
+  margin-top: 20px;
+}
+
+.horarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.horarios button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.horarios button.selecionado {
+  background-color: #BF335D;
+  color: white;
+}
+
+.acoes {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendario-header{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.volta-mes, .prox-mes{
+    background-color: white;
+    border: none;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+
+
+.mes, .ano{
+    border: none;
+    font-size: 19px;
+    transition: all 0.3s ease;
+}
+
+
+
+.volta-mes:hover, .prox-mes:hover, .mes:hover, .ano:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background-color: #BF335D;
+    color: white;
+
+}
+
+.btn-confirm, .btn-cancel{
+  border: 2px solid #BF335D;
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: black;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.btn-confirm:hover, .btn-cancel:hover{
+  background-color: #BF335D;
+  color: white;
+  scale: 1.1;
+}

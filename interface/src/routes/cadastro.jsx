@@ -7,6 +7,7 @@ import womenImage from "../assets/women.png";
 import api from "../services/api";
 //Importando Hooks
 import { useRef, useState } from "react";
+import { useHref } from "react-router-dom";
 
 
 
@@ -28,6 +29,8 @@ export default function Cadastro() {
         telefone: inputTelefone.current.value
       })
       console.log("Cadastrado")
+      alert("Cadastrado com sucesso")
+      useHref("/Login")
     } catch (error) {
       console.log(error)
     }
@@ -41,21 +44,21 @@ export default function Cadastro() {
         <h1>Cadastrar</h1>
         <label>
           Nome:
-          <input  className='input' name='nome' type='text' placeholder='Nome' ref={inputNome} />
+          <input  className='input' name='nome' type='text' placeholder='Nome' ref={inputNome} required />
 
 
         </label>
         <label>
           Usuário:
-          <input  className='input' name='usuario' type='text' placeholder='Usuario' ref={inputUsuario} />
+          <input  className='input' name='usuario' type='text' placeholder='Usuario' ref={inputUsuario} required />
         </label>
         <label>
           Senha:
-          <input className='input' name='senha' type='password' placeholder='Senha' ref={inputSenha} />
+          <input className='input' name='senha' type='password' placeholder='Senha' ref={inputSenha}  required/>
         </label>
         <label>
           Telefone:
-          <input className='input' name='telefone' type='text' placeholder='Telefone' ref={inputTelefone} />
+          <input className='input' name='telefone' type='text' placeholder='Telefone' ref={inputTelefone} required/>
         </label>
         <button type="button" className="btn-cadastro" onClick={createUser}>Cadastrar</button>
       </Modal>

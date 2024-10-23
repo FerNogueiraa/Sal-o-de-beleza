@@ -8,17 +8,12 @@ const PrivateRoute = () => {
   const location = useLocation();
   
   useEffect(() => {
-    console.log('PrivateRoute: Verificando autenticação');
-    console.log('Token presente:', isLoggedIn);
-    console.log('Localização atual:', location.pathname);
+    
   }, [isLoggedIn, location]);
 
   if (!isLoggedIn) {
-    console.log('Redirecionando para login');
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
-
-  console.log('Permitindo acesso à rota privada');
   return <Outlet />;
 };
 

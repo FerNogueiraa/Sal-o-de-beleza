@@ -1,58 +1,96 @@
-.forms-select{
+.content-modal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #BF335D;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.forms-select {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-}
-
-.forms-select input{
-    height: 30px;
-    border-radius: 10px;
-    border: none;
+    gap: 1.5vw;
     width: 100%;
-
 }
 
-.forms-select select{
+.forms-select input,
+.forms-select select,
+.forms-select button {
     height: 30px;
     border-radius: 10px;
     border: none;
     width: 100%;
 }
 
-.forms-select button{
-    height: 30px;
-    border-radius: 10px;
-    border: none;
+.content-label {
+    display: flex;
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.content-label{
-display: flex;
-width: 100%;
-}
-
-.total{ 
-    padding: 0 20px 0 20px;
-    height: 30px;
+.total { 
+    padding: 0 20px;
+    height: 40px;
     border-radius: 10px;
     border: none;
-    width: min-content;
+    width: auto;
     background-color: #FFFF;
     color: black;
-display: flex;
-align-items: center;
-}
-
-.label-total{
+    text-align: center;
     display: flex;
     align-items: center;
 }
-.btn-agendar{
+
+.label-total {
+    display: flex;
+    align-items: center;
+}
+
+.btn-agendar {
     border: 2px solid #BF335D;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     height: 40px;
     background-color: #751f39;
     border-radius: 4px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin: 5px;
+}
+
+.selected-date-time {
+    border-radius: 10px;
+    border: none;
+    width: calc(100% - 15px);
+    padding: 5px;
+    background-color: white;
+    color: black;
+    margin-left: 15px;
+}	
+
+.btn-calendario {
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .content-modal {
+        padding: 20px;
+    }
+
+    .forms-select {
+        gap: 10px;
+    }
+
+    .btn-agendar {
+        width: calc(100% - 10px);
+        max-width: none;
+    }
 }
