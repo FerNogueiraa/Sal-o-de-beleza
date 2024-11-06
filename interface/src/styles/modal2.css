@@ -6,18 +6,25 @@
     width: 100%;
     margin-top: -80px;
    }
-   
-   .content-image2{
-       display: flex;
-       bottom: 0;
-       max-width: max-content;
-       height: 100%;
-       padding: 10% 0 0 0;
-       margin-left: 1000px;
+   .Pontodoespaco{
+    color: #BF335D;
+    margin-top: 100px;
+    text-align: left;
+   }
+   .Botao-Home{
+    background-color: #FFFFFF;
+    color: #BF335D;
+    width: 90px;
+    height: 60px;
+    font-size: 20px;
+    font-family: poppins;
+    border: #FFFFFF;
+    border-radius: 10px;
    }
    
+   
    .image-women2{
-       width: 400px;
+       width: 450px;
    }
    
    .texto-home{
@@ -26,37 +33,43 @@
    }
 
    .maior{
-    font-size: 40px;
-    margin-left: -910px;
-    font-family: rufina;
+    font-size: 60px;
+    margin-left: -700px;
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: -20px;
    }
 
    .maioresquerda2{
-    font-size: 40px;
-    margin-left: -1150px;
-    font-family: rufina;
+    font-size: 60px;
+    margin-left: -1110px;
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: -20px;
    }
    .maioresquerda1{
-    font-size: 40px;
-    margin-left: -944px;
-    font-family: rufina;
+    font-size: 60px;
+    margin-left: -760px;
+    font-family: poppins;
+    font-weight: 600;
    }
    
    .menor{
     font-size: 25px;
-    font-family: rufina;
+    font-family: poppins;
     margin-left: -1010px;
    }
 
    .menor1{
-    margin-left: -1056px;
-    font-family: rufina;
+    margin-left: -930px;
+    font-family: poppins;
     font-size: 25px;
    }
    .menor2{
-    margin-left: -991px;
-    font-family: rufina;
+    margin-left: -860px;
+    font-family: poppins;
     font-size: 25px;
+    
    }
 
    .servico{
@@ -144,12 +157,13 @@
    .imagem-historia{
     width: 480px;
     margin-left: 150px;
+    margin-top:-80px;
    }
 
    .escrita-historia{
-    font-family: rufina;
+    font-family: poppins;
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     text-align: justify;
     margin-right: 20px;
    }
@@ -157,7 +171,7 @@
    .div-menorescrita{
     width: 570px;
     height: 450px;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: 60px;
    }
 

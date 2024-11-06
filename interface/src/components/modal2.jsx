@@ -15,18 +15,19 @@ export default function Modal2({ children, image }) {
     <>
     
       <div className="content-modal2">
-          <div className="content-image2">
+  
           <div className="texto-home">
             <p className="maioresquerda1">Um Visual mais que </p>
             <p className="maior">inovador é sua beleza </p>
             <p className="maioresquerda2">conosco </p>
-            <p className="menor1">Venha conferir nosso</p>
-            <p className="menor2">atendimento qualificado, e </p>
-            <p className="menor">faça sucesso por onde for</p>
-            <button  className='btn-agendar2' ><a href="Agendamento">Agendar</a></button>
+            <br />
+            <p className="menor1">Venha conferir nosso atendimento</p>
+            <p className="menor2"><strong>qualificado</strong>, e onde for ira fazer <strong>sucesso</strong></p>
+            <button className="Botao-Home" ><a href="Agendamento"> AGENDAR</a></button>
+            <p className="Pontodoespaco">.</p>
         </div>
-            <img className="image-women2" src={image} alt="Imagem" />
-        </div>
+           
+       
         
         </div>
         <h1 className="servico">SERVIÇOS</h1>
