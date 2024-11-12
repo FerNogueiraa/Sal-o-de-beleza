@@ -1,77 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rufina:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .content-modal2{
     background-color: #BF335D;
-    padding: 0 100px 0 850px;
-    border-top-left-radius: 55px;
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 55px;
-    margin-left: 25px;
+    width: 100%;
+    margin-top: -80px;
    }
-   
-   .content-image2{
-       display: flex;
-       bottom: 0;
-       max-width: max-content;
-       height: 100%;
-       padding: 20% 0 0 0;
-   
+   .Pontodoespaco{
+    color: #BF335D;
+    margin-top: -25px;
+    text-align: left;
    }
-   
+   .Botao-Home {
+    background-color: white;
+    color: #BF335D; /* Cor bordo */
+    font-weight: bold;
+    font-family: 'Poppins';
+    border: #FFFFFF;
+    font-size: 30PX;
+    margin-right: 1034PX;
+    margin-top: 20px;
+    }
+
    .image-women2{
-       width: 400px;
+       width: 450px;
    }
    
    .texto-home{
     color: white;
     margin-top: 70px;
+    margin-right: 200px;
    }
 
    .maior{
-    font-size: 40px;
-    margin-left: -910px;
-    font-family: rufina;
+    font-size: 60px;
+    margin-left: -700px;
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: -20px;
    }
 
    .maioresquerda2{
-    font-size: 40px;
-    margin-left: -1150px;
-    font-family: rufina;
+    font-size: 60px;
+    margin-left: -1110px;
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: -20px;
    }
    .maioresquerda1{
-    font-size: 40px;
-    margin-left: -944px;
-    font-family: rufina;
+    font-size: 60px;
+    margin-left: -760px;
+    font-family: poppins;
+    font-weight: 600;
    }
    
    .menor{
     font-size: 25px;
-    font-family: rufina;
+    font-family: poppins;
     margin-left: -1010px;
    }
 
    .menor1{
-    margin-left: -1056px;
-    font-family: rufina;
+    margin-left: -930px;
+    font-family: poppins;
     font-size: 25px;
    }
    .menor2{
-    margin-left: -991px;
-    font-family: rufina;
+    margin-left: -860px;
+    font-family: poppins;
     font-size: 25px;
+    
    }
 
    .servico{
-    color: #D7B39F;
-    font-family: roboto slab;
+    color: #BF335D;
+    font-family: poppins;
     font-size: 40px;
     margin-top: 50px;
    }
 
    .servicomenor{
-    color: #D7B39F;
-    font-family: roboto slab;
+    color: #BF335D;
+    font-family: poppins;
     font-size: 30px;
     margin-top: -80px;
    }
@@ -86,20 +96,20 @@
    .imagem-limpeza{
     width: 344.2px;
     margin-top: -190px;
-    border:solid #D7B39F;
+    border:solid #BF335D;
     margin: 0 15px; /* Adiciona espaçamento entre as imagens */
    }
 
    .imagem-micro{
     width: 345px;
     margin-top: -190px;
-    border:solid #D7B39F;
+    border:solid #BF335D;
     margin: 0 15px; /* Adiciona espaçamento entre as imagens */
    }
    .imagem-design{
     width: 344.2px;
     margin-top: -190px;
-    border:solid #D7B39F;
+    border:solid #BF335D;
     margin: 0 15px; /* Adiciona espaçamento entre as imagens */
    }
 
@@ -109,65 +119,68 @@
 
    .nome1{
     font-family: rufina;
-    color:  #D7B39F;
+    color:  #BF335D;
     font-size: 22px;
     margin-left: -750px;
    }
 
    .nome2{
     font-family: rufina;
-    color: #D7B39F;
+    color: #BF335D;
     font-size: 22px;
     margin-top: -27px;
    }
 
    .nome3{
     font-family: rufina;
-    color: #D7B39F;
+    color: #BF335D;
     font-size: 22px;
     margin-left: 750px;
     margin-top: -27px;
    }
 
    .Historia{
-    color: #D7B39F;
-    font-size: 40px;
-    font-family: roboto slab;
-    margin-top: 110px;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: poppins;
+    text-align: left;
+    
    }
 
    .div-historia{
     background-color: #BF335D;
     display: flex;
     margin-top: 50px;
-    border-radius: 70px;
+    width: 1901px;
+    margin-left: -250px;
    }
 
    .imagem-historia{
-    width: 480px;
-    margin-left: 150px;
+    width: 550px;
+    margin-left: 300px;
+    margin-top:-80px;
    }
 
    .escrita-historia{
-    font-family: rufina;
+    font-family: poppins;
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     text-align: justify;
-    margin-right: 20px;
+    margin-right: -20px;
    }
 
    .div-menorescrita{
     width: 570px;
     height: 450px;
-    margin-top: 150px;
-    margin-left: 60px;
+    margin-top: 70px;
+    margin-left: 200px;
    }
 
    .feedback{
-    font-family: roboto slab;
+    font-family: poppins;
     font-size: 40px;
     margin-top: 120px;
-    color: #D7B39F;
+    color: #BF335D;
    }
 
    .reti1{
@@ -293,5 +306,11 @@
     width: 280px;
     height: 200px;
     margin-top: 20px;
+   }
+
+   .imagem-home{
+    margin-left: 70%;
+    margin-top: -28%;
+    width: 500px;
    }
    
