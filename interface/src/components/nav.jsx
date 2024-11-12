@@ -27,12 +27,13 @@ export default function Nav() {
           <Link to="/">Home</Link>
           <a href='https://maps.app.goo.gl/6rfzgWo2YYFTd3hS9' target='_blank' rel='noopener noreferrer'>Localização</a>
           <Link to="/Agendamento">Agendamento</Link>
-          <Link to="/Agendamentoadm">Agendamento Adm</Link>
+          
         </ul>
       </div>
       <span>
         {isLoggedIn ? (
           <div className="user-menu">
+            <Link to="/Agendamentoadm">Agendamento Adm</Link>
             <Popup
               trigger={
                 <button className='user-button'>
