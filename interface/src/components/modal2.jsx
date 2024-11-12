@@ -3,7 +3,8 @@ import "../styles/modal2.css";
 import limpeza from "../assets/limpeza.jpg";
 import micropigmentacao from "../assets/micropigmentacao.jpg";
 import design from "../assets/design.jpg";
-import imghistoria from "../assets/imghistoria.png"
+import imghistoria from "../assets/imghistoria.png";
+import women2 from "../assets/women2.png";
 import { Link } from "react-router-dom";
 import Agendamento from "../routes/agendamento";
 
@@ -23,7 +24,8 @@ export default function Modal2({ children, image }) {
             <br />
             <p className="menor1">Venha conferir nosso atendimento</p>
             <p className="menor2"><strong>qualificado</strong>, e onde for ira fazer <strong>sucesso</strong></p>
-            <button className="Botao-Home" ><a href="Agendamento"> AGENDAR</a></button>
+            <button className="Botao-Home" >AGENDE SEU HORÁRIO</button>
+            <img className="imagem-home" src={women2} alt="Imagem" />
             <p className="Pontodoespaco">.</p>
         </div>
            
@@ -40,15 +42,18 @@ export default function Modal2({ children, image }) {
         <p className="nome1">Limpeza de Pele</p>
         <p className="nome2">Micropigmentação</p>
         <p className="nome3">Design de Sobrancelha</p>
-
-        <h1 className="Historia">HISTÓRIA</h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <div className="div-historia">
-        <img className="imagem-historia" src={imghistoria} alt="Imagem" />
-
         <div className="div-menorescrita">
+        <h1 className="Historia">HISTÓRIA</h1>
         <p className="escrita-historia">Em 2004, Sandra começou a trabalhar com design de sobrancelhas em casa, dedicando-se com paixão e atenção aos detalhes. Seu trabalho logo ganhou fama, e a demanda cresceu tanto que, em 2013, ela abriu seu próprio estúdio. Hoje, Sandra Sobrancelhas é um local renomado, conhecido pela qualidade excepcional e pelo atendimento acolhedor, refletindo o amor e a dedicação de Sandra ao seu ofício.</p>
         </div>
+        <img className="imagem-historia" src={imghistoria} alt="Imagem" />
         </div>
         <h1 className="feedback">FEEDBACK</h1>
 

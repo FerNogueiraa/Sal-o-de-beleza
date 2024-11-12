@@ -8,21 +8,20 @@
    }
    .Pontodoespaco{
     color: #BF335D;
-    margin-top: 100px;
+    margin-top: -25px;
     text-align: left;
    }
-   .Botao-Home{
-    background-color: #FFFFFF;
-    color: #BF335D;
-    width: 90px;
-    height: 60px;
-    font-size: 20px;
-    font-family: poppins;
+   .Botao-Home {
+    background-color: white;
+    color: #BF335D; /* Cor bordo */
+    font-weight: bold;
+    font-family: 'Poppins';
     border: #FFFFFF;
-    border-radius: 10px;
-   }
-   
-   
+    font-size: 30PX;
+    margin-right: 1034PX;
+    margin-top: 20px;
+    }
+
    .image-women2{
        width: 450px;
    }
@@ -30,6 +29,7 @@
    .texto-home{
     color: white;
     margin-top: 70px;
+    margin-right: 200px;
    }
 
    .maior{
@@ -140,23 +140,24 @@
    }
 
    .Historia{
-    color: #BF335D;
-    font-size: 40px;
+    color: #FFFFFF;
+    font-size: 50px;
     font-family: poppins;
-    margin-top: 110px;
+    text-align: left;
+    
    }
 
    .div-historia{
     background-color: #BF335D;
     display: flex;
     margin-top: 50px;
-    width: 1500px;
-    margin-left: -50px;
+    width: 1901px;
+    margin-left: -250px;
    }
 
    .imagem-historia{
-    width: 480px;
-    margin-left: 150px;
+    width: 550px;
+    margin-left: 300px;
     margin-top:-80px;
    }
 
@@ -165,14 +166,14 @@
     color: white;
     font-size: 28px;
     text-align: justify;
-    margin-right: 20px;
+    margin-right: -20px;
    }
 
    .div-menorescrita{
     width: 570px;
     height: 450px;
-    margin-top: 100px;
-    margin-left: 60px;
+    margin-top: 70px;
+    margin-left: 200px;
    }
 
    .feedback{
@@ -305,5 +306,11 @@
     width: 280px;
     height: 200px;
     margin-top: 20px;
+   }
+
+   .imagem-home{
+    margin-left: 70%;
+    margin-top: -28%;
+    width: 500px;
    }
    
