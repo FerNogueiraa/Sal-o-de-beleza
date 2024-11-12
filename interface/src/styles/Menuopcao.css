@@ -1,0 +1,44 @@
+.DivOpcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin-top: -570px;
+  }
+  
+  .button-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-option svg {
+    margin-right: 8px;
+  }
+  
+  .button-option.add-employee {
+    background-color: #28a745; /* Verde */
+  }
+  
+  .button-option.delete-employee {
+    background-color: #dc3545; /* Vermelho */
+  }
+  
+  .button-option:hover {
+    opacity: 0.9;
+  }
+  
+  
+  

@@ -12,6 +12,9 @@ import Agendamento from './routes/agendamento.jsx';
 import Agendamentoadm from './routes/agendamentoadm.jsx'
 import ErrorPage from './routes/ErrorPage.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
+import MenuOpcao from './routes/Menuopcao.jsx'
+import ExcluirFuncionario from './routes/ExcluirFuncionario.jsx'
+import AdicionarFuncionario from './routes/AdicionarFuncionario.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,22 @@ const router = createBrowserRouter([
       {
         path: "cadastro",
         element: <Cadastro/>,
+      },
+      {
+        path: "agendamentoadm",
+        element: <Agendamentoadm/>,
+      },
+      {
+        path: "Menuopcao",
+        element: <MenuOpcao/>,
+      },
+      {
+        path: "ExcluirFuncionario",
+        element: <ExcluirFuncionario/>,
+      },
+      {
+        path: "AdicionarFuncionario",
+        element: <AdicionarFuncionario/>,
       },
       {
         element: <PrivateRoute />,
