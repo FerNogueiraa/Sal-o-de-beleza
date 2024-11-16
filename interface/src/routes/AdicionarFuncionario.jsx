@@ -16,18 +16,31 @@ export default function AdicionarFuncionario() {
         <Nav />
       </div>
 
-      <div className="DivAdicionar">
-        <input
-          type="text"
-          className="input-field"
-          placeholder="Digite o nome do funcionário"
-          value={nomeFuncionario}
-          onChange={handleInputChange}
-        />
-        <button className="button-option add-employee">
-          Adicionar Funcionário
-        </button>
-      </div>
+      <div className="DivOpcaoo">
+  <div className="form-container">
+    <h2 className="form-title">Adicionar Funcionário</h2>
+    <input
+      type="text"
+      className="input-field"
+      placeholder="Digite o nome do funcionário"
+      value={nomeFuncionario}
+      onChange={handleInputChange}
+    />
+    <button className="button-optionn delete-employee">
+      Adicionar Funcionário
+    </button>
+  </div>
+  
+</div>
+<br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
       <div className="footer-position">
         <Footer />

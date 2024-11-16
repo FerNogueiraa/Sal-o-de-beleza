@@ -17,17 +17,30 @@ export default function ExcluirFuncionario() {
       </div>
 
       <div className="DivOpcaoo">
-        <input
-          type="text"
-          className="input-field"
-          placeholder="Digite o nome do funcionário"
-          value={nomeFuncionario}
-          onChange={handleInputChange}
-        />
-        <button className="button-option delete-employee">
-          Excluir Funcionário
-        </button>
-      </div>
+  <div className="form-container">
+    <h2 className="form-title">Excluir Funcionário</h2>
+    <input
+      type="text"
+      className="input-field"
+      placeholder="Digite o nome do funcionário"
+      value={nomeFuncionario}
+      onChange={handleInputChange}
+    />
+    <button className="button-option delete-employee">
+      Excluir Funcionário
+    </button>
+  </div>
+  
+</div>
+<br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
       <div className="footer-position">
         <Footer />
