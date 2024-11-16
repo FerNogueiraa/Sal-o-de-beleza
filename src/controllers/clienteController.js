@@ -29,7 +29,7 @@ const clienteController = {
         return res.status(401).json({ error: 'Credenciais inválidas' });
       }
 
-      const token = jwt.sign({ id: cliente.id }, process.env.SECRET, { expiresIn: '1d' });
+      const token = jwt.sign({ id: cliente.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
       res.json({ token, clienteId: cliente.id });
     } catch (error) {
       console.error('Erro no login:', error.message);
