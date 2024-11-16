@@ -62,6 +62,29 @@ export default function Cadastro() {
         </label>
         <button type="button" className="btn-cadastro" onClick={createUser}>Cadastrar</button>
       </Modal>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="footer-position">
         <Footer />
       </div>
