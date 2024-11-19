@@ -23,17 +23,30 @@ const clienteController = {
   login: async (req, res) => {
     try {
       const { usuario, senha } = req.body;
-      const cliente = await prisma.cliente.findUnique({ where: { usuario } });
-      
-      if (!cliente || !(await bcrypt.compare(senha, cliente.senha))) {
+  
+      // Tenta encontrar um cliente
+      let usuarioEncontrado = await prisma.cliente.findUnique({ where: { usuario } });
+  
+      // Se não encontrar um cliente, tenta encontrar um funcionário
+      if (!usuarioEncontrado) {
+        usuarioEncontrado = await prisma.funcionario.findUnique({ where: { usuario } });
+      }
+  
+      // Se ainda não encontrou, retorna erro
+      if (!usuarioEncontrado) {
         return res.status(401).json({ error: 'Credenciais inválidas' });
       }
-
-      const token = jwt.sign({ id: cliente.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
-      res.json({ token, clienteId: cliente.id });
+  
+      // Verifica a senha
+      const senhaCorreta = await bcrypt.compare(senha, usuarioEncontrado.senha);
+      if (!senhaCorreta) {
+        return res.status(401).json({ error: 'Credenciais inválidas' });
+      }
+  
+      const token = jwt.sign({ id: usuarioEncontrado.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
+      res.json({ token, userId: usuarioEncontrado.id });
     } catch (error) {
       console.error('Erro no login:', error.message);
-      console.error(error.stack);
       res.status(500).json({ error: 'Erro interno no servidor', details: error.message });
     }
   }
