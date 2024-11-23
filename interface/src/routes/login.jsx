@@ -49,7 +49,11 @@ function Login() {
       
       login(response.data.token);
       localStorage.setItem('userId', response.data.clienteId);
+      localStorage.setItem('tipoUsuario', response.data.tipoUsuario)
       
+      console.log("token:", localStorage.getItem('token'))
+      console.log('userId', localStorage.getItem('userId'))
+
       console.log("Redirecionando para a página de Agendamento...");
       navigate('/Agendamento');
     } catch (error) {
