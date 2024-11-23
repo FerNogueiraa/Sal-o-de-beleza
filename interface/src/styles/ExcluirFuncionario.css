@@ -1,52 +1,47 @@
-.DivOpcaoo {
+.container-excluir {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -700px;
- 
+  height: 80vh; /* Ajusta a altura para centralizar verticalmente */
+  margin-top: -850px;
 }
 
-.form-container {
-  background-color: #BF335D; /* Cor bordô */
-  padding: 30px;
-  border-radius: 10px; /* Bordas arredondadas para suavidade */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+.excluir-box {
+  background-color: #bf335d;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* Espaçamento entre os elementos */
-  max-width: 400px; /* Largura máxima do formulário */
-  width: 100%; /* Responsivo */
-  
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.form-title {
-  font-size: 24px;
-  color: #ffffff;
-  margin: 0;
+.excluir-box h2 {
+  color: white;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.input-field {
-  width: 100%;
-  padding: 10px 15px;
+.excluir-box input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
-  outline: none;
 }
 
-.button-option {
-  background-color: #ff4d4d; /* Cor do botão */
-  color: #fff;
+.excluir-box button {
+  background-color: #bf335d;
+  color: white;
+  border: none;
   padding: 10px 20px;
-  border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 16px;
+ 
 }
 
-.button-option:hover {
-  background-color: #e60000; /* Efeito hover no botão */
-}
+
