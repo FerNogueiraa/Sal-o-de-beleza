@@ -49,7 +49,7 @@ const clienteController = {
       const token = jwt.sign({ id: usuarioEncontrado.id, tipo: tipoUsuario }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
       // Retorna o token, ID do usuário e tipo de usuário
-      res.json({ token, userId: usuarioEncontrado.id, tipoUsuario });
+      res.json({ token, clienteId: usuarioEncontrado.id, tipoUsuario });
 
     } catch (error) {
       console.error('Erro no login:', error.message);
