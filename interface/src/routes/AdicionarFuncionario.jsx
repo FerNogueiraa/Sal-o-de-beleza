@@ -40,7 +40,7 @@ export default function AdicionarFuncionario() {
       <div className="form-container">
        
         <form className="funcionario-form" onSubmit={handleSubmit}>
-        <h2>Adicionar Funcionário</h2>
+        <h2 className="addfunc">Adicionar Funcionário</h2>
           <label>
             Nome:
             <input
