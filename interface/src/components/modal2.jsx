@@ -23,7 +23,7 @@ export default function Modal2({ children, image }) {
             <br />
             <p className="menor1">Venha conferir nosso atendimento</p>
             <p className="menor2"><strong>qualificado</strong>, e onde for ira fazer <strong>sucesso</strong></p>
-            <button className="Botao-Home" >AGENDE SEU HORÁRIO</button>
+            <h2 className="Botao-Home" >AGENDE SEU HORÁRIO</h2>
             <img className="imagem-home" src={women2} alt="Imagem" />
             <p className="Pontodoespaco">.</p>
         </div>
@@ -42,6 +42,13 @@ export default function Modal2({ children, image }) {
         <p className="nome2">Micropigmentação</p>
         <p className="nome3">Design de Sobrancelha</p>
         <br />
+                {/* Botão Saiba Mais */}
+                <div className="div-btn-saibamais">
+          <Link to="/servicos">
+            <button className="btn-saibamais">SAIBA MAIS</button>
+          </Link>
+        </div>
+
         <br />
         <br />
         <br />
@@ -59,7 +66,7 @@ export default function Modal2({ children, image }) {
         <div className="div-feedback">
           <div className="divfeed1">
             <h2 className="retis1">"</h2>
-            <h2 className="karen">Karinelli Mariot Giusti</h2>
+            <h2 className="karen">Karinelli Mariot </h2>
             
             <div className="divkaren">
             

@@ -15,6 +15,7 @@ import PrivateRoute from './components/PrivateRoute.jsx';
 import MenuOpcao from './routes/Menuopcao.jsx'
 import ExcluirFuncionario from './routes/ExcluirFuncionario.jsx'
 import AdicionarFuncionario from './routes/AdicionarFuncionario.jsx'
+import Servicos from './routes/Servicos.jsx'
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "AdicionarFuncionario",
         element: <AdicionarFuncionario/>,
+      },
+      {
+        path: "Servicos",
+        element: <Servicos/>,
       },
       {
         element: <PrivateRoute />,

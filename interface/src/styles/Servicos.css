@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rufina:wght@400;700&display=swap');
+
+.container-servicos {
+    padding: 20px;
+    text-align: center;
+    margin-top: -830px;
+}
+
+h2 {
+    color: #bf335d;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card-servico {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px; /* Ajustando o padding */
+    border: 2px solid #bf335d;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajustando sombra */
+    max-width: 600px; /* Menor largura */
+    height: 300px; /* Maior altura */
+    margin: 20px auto; /* Centraliza os cards */
+}
+
+.card-servico.left {
+    flex-direction: row;
+}
+
+.card-servico.right {
+    flex-direction: row-reverse;
+}
+
+.imagem-servico {
+    max-width: 200px; /* Imagem menor */
+    max-height: 200px;
+    border-radius: 8px;
+    margin: 0 20px; /* Ajustando a margem */
+    object-fit: cover;
+}
+
+.texto-servico {
+    text-align: left;
+    flex: 1;
+}
+
+.texto-servico h3 {
+    color: #bf335d;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px; /* Fonte maior */
+    font-weight: bold;
+}
+
+.texto-servico p {
+    margin-bottom: 10px; /* Ajustando espaçamento */
+    font-size: 16px; /* Fonte maior */
+    line-height: 1.6; /* Maior espaçamento entre linhas */
+    font-family: 'Rufina', serif;
+}
+
+.preco {
+    font-weight: bold;
+    color: #bf335d;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}

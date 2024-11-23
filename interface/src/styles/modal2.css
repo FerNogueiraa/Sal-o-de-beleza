@@ -239,12 +239,14 @@
    .retis1{
     margin-left: -280px;
     font-size: 50px;
+    color: white;
    }
 
    .karen{
-    margin-left: -45px;
+    margin-left: -75px;
     margin-top: -30px;
     font-family: rufina;
+    color: white;
    }
 
    .karenfeed{
@@ -264,12 +266,14 @@
    .retis2{
     margin-left: -295px;
     font-size: 50px;
+    color: white;
    }
 
    .larissa{
-    margin-left: -150px;
+    margin-left: -110px;
     margin-top: -30px;
     font-family: rufina;
+    color: white;
    }
 
    .larissafeed{
@@ -289,12 +293,14 @@
    .retis3{
     margin-left: -300px;
     font-size: 50px;
+    color: white;
    }
 
    .lucas{
-    margin-left: -170px;
+    margin-left: -130px;
     margin-top: -30px;
     font-family: rufina;
+    color: white;
    }
 
    .lucasfeed{
@@ -316,5 +322,30 @@
     margin-top: -28%;
     width: 500px;
    }
+
+   .div-btn-saibamais {
+    text-align: center; /* Centraliza o botão */
+    margin-top: 20px; /* Adiciona espaçamento acima do botão */
+  }
+  
+  .btn-saibamais {
+    background-color: #BF335D; /* Cor do fundo no padrão do site */
+    color: white; /* Texto em branco */
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-saibamais:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #BF335D; /* Texto muda para a cor bordo */
+    transform: scale(1.05); /* Leve aumento no botão */
+  }
+  
    
    
