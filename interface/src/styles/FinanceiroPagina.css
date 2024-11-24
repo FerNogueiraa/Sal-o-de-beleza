@@ -1,0 +1,57 @@
+.controle-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 200px;
+  }
+  
+  .controle-container h1 {
+    color: #bf335d;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .tabela-container {
+    margin-bottom: 40px;
+  }
+  
+  .tabela-container h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .tabela-financeira {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabela-financeira th,
+  .tabela-financeira td {
+    padding: 10px;
+    border: 1px solid #bf335d;
+    text-align: center;
+  }
+  
+  .tabela-financeira th {
+    background-color: #bf335d;
+    color: #fff;
+  }
+  
+  .tabela-financeira tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabela-financeira tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  .tabela-financeira tfoot td {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    color: #bf335d;
+  }
+  
