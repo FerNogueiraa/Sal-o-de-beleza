@@ -1,26 +1,38 @@
 .controle-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 200px;
+    margin-bottom: 300px;
+    
   }
   
   .controle-container h1 {
     color: #bf335d;
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .tabelas-alinhadas {
+    display: flex;
+    flex-wrap: wrap; /* Adiciona responsividade */
+    gap: 20px; /* Espaço entre as tabelas */
+    justify-content: center; /* Centraliza horizontalmente */
   }
   
   .tabela-container {
-    margin-bottom: 40px;
+    flex: 1;
+    min-width: 300px; /* Tamanho mínimo para telas pequenas */
+    max-width: 400px; /* Tamanho máximo */
   }
   
   .tabela-container h2 {
-    color: #333;
+    text-align: center;
     font-size: 1.5em;
+    color: #333;
     margin-bottom: 10px;
   }
   
