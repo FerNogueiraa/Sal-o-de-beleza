@@ -1,0 +1,50 @@
+.content-funcionariooo {
+    text-align: center;
+    padding: 20px;
+    margin-top: -800px;
+  }
+  
+  .titulo-funcionariooo {
+    margin-bottom: 30px;
+    color: #bf335d;
+  }
+  
+  .cards-funcionariooo {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .card-funcionariooo {
+    width: 300px;
+    height: 300px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-funcionariooo:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-icon {
+    margin-bottom: 15px;
+  }
+  
+  .card-funcionariooo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-funcionariooo p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
