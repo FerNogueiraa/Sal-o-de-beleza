@@ -28,9 +28,15 @@ export default function Nav() {
         <ul className='routes'>
           {isLoggedIn ? (
             <>
-              <Link to="/">Home</Link>
-              <a href='https://maps.app.goo.gl/6rfzgWo2YYFTd3hS9' target='_blank' rel='noopener noreferrer'>Localização</a>
-              {userRole === 'cliente' && <Link to="/Agendamento">Agendamento</Link>}
+              
+              
+              {userRole === 'cliente' && (
+                <>
+                  <Link to="/">Home</Link>
+                  <a href='https://maps.app.goo.gl/6rfzgWo2YYFTd3hS9' target='_blank' rel='noopener noreferrer'>Localização</a>
+                  <Link to="/Agendamento">Agendamento</Link>
+                </>
+              )}
               {userRole === 'funcionario' && (
                 <>
                   <Link to="/PaginaFuncionario">Funcionário</Link>

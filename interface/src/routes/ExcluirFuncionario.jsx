@@ -2,17 +2,35 @@ import React, { useState } from "react";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import "../styles/ExcluirFuncionario.css";
+import api from "../services/api";
 
 export default function ExcluirFuncionario() {
   const [cpf, setCpf] = useState("");
 
   const handleInputChange = (e) => {
-    setCpf(e.target.value);
+    setCpf(e.target.value.trim()); // Use trim para remover espaços em branco
   };
 
-  const handleDelete = () => {
-    // Lógica para excluir funcionário pelo CPF
-    alert(`Funcionário com CPF ${cpf} foi excluído.`);
+  const handleDelete = async () => {
+    if (!cpf) {
+      alert("Por favor, insira um CPF válido.");
+      return;
+    }
+
+    try {
+      console.log(`Tentativa de exclusão para CPF: ${cpf}`);
+      // Certifique-se de que o CPF está correto e no formato esperado
+      const response = await api.delete(`api/deletarFuncionario/${cpf}`);
+      alert(response.data.message);
+    } catch (error) {
+      console.error('Erro ao excluir funcionário:', error);
+      if (error.response) {
+        alert(`Erro ao excluir: ${error.response.data.error || "Erro desconhecido"}`);
+      } else {
+        alert('Erro de conexão com o servidor');
+      }
+    }
+
     setCpf(""); // Limpa o campo de CPF após a exclusão
   };
 

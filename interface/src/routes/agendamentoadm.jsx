@@ -1,16 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa"; // Importando ícones
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import "../styles/agendamentoadm.css";
+import api from "../services/api"; // Certifique-se de que o axios está configurado
 
 export default function Agendamentoadm() {
   const [selectedDate, setSelectedDate] = useState("");
-  const [appointments, setAppointments] = useState([
-    { id: 1, name: "Cliente 1", time: "10:00", confirmed: null },
-    { id: 2, name: "Cliente 2", time: "11:00", confirmed: null },
-    { id: 3, name: "Cliente 3", time: "13:00", confirmed: null },
-  ]);
+  const [appointments, setAppointments] = useState([]);
+
+  useEffect(() => {
+    const fetchAppointments = async (date) => {
+      try {
+        const response = await api.get(`/api/agendamentos-por-data`, {
+          params: { date }
+        });
+        console.log("Agendamentos recebidos:", response.data);
+        setAppointments(response.data); // Atualiza o estado com os agendamentos recebidos
+      } catch (error) {
+        console.error("Erro ao buscar agendamentos:", error);
+        alert("Erro ao buscar agendamentos, tente novamente mais tarde.");
+      }
+    };
+
+    if (selectedDate) {
+      fetchAppointments(selectedDate); // Chama a função quando uma data é selecionada
+    }
+  }, [selectedDate]);
 
   const handleDateChange = (e) => {
     setSelectedDate(e.target.value);
@@ -28,10 +44,9 @@ export default function Agendamentoadm() {
 
   return (
     <>
-    <div className="content-cadastro">
-      <Nav />
-    </div>
-      
+      <div className="content-cadastro">
+        <Nav />
+      </div>
 
       <div className="DivAgendamento">
         <div className="date-filter">
@@ -45,40 +60,34 @@ export default function Agendamentoadm() {
         </div>
 
         <div className="appointments-list">
-          {appointments.map((appointment) => (
-            <div key={appointment.id} className="appointment-item">
-              <span>{appointment.time} - {appointment.name}</span>
-              <div className="icons">
-                <FaCheck
-                  className={`icon ${appointment.confirmed === true ? "confirmed" : ""}`}
-                  onClick={() => handleConfirm(appointment.id, true)}
-                />
-                <FaTimes
-                  className={`icon ${appointment.confirmed === false ? "declined" : ""}`}
-                  onClick={() => handleConfirm(appointment.id, false)}
-                />
+          {appointments.length === 0 ? (
+            <p>Nenhum agendamento encontrado para esta data.</p>
+          ) : (
+            appointments.map((appointment) => (
+              <div key={appointment.id} className="appointment-item">
+                <span>
+                  {appointment.horario} - {appointment.cliente.nome} - {appointment.servico.nome}
+                </span>
+                <div className="icons">
+                  <FaCheck
+                    className={`icon ${appointment.confirmed === true ? "confirmed" : ""}`}
+                    onClick={() => handleConfirm(appointment.id, true)}
+                  />
+                  <FaTimes
+                    className={`icon ${appointment.confirmed === false ? "declined" : ""}`}
+                    onClick={() => handleConfirm(appointment.id, false)}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-
-      
-    <div className="footer-position">
-      <Footer />
-    </div>
+      <div className="footer-position">
+        <Footer />
+      </div>
     </>
   );
 }
