@@ -28,7 +28,7 @@ export default function Nav() {
           <a href='https://maps.app.goo.gl/6rfzgWo2YYFTd3hS9' target='_blank' rel='noopener noreferrer'>Localização</a>
           {userRole === 'cliente' && <Link to="/Agendamento">Agendamento</Link>}
           {userRole === 'funcionario' && <Link to="/Agendamentoadm">Agendamento Adm</Link>}
-          {userRole === 'funcionario' && <Link to="/Agendamentoadm">Cadastro Funcionário</Link>}
+          {userRole === 'funcionario' && <Link to="/AdicionarFuncionario">Cadastro Funcionário</Link>}
         </ul>
       </div>
       <span>

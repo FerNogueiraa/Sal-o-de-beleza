@@ -1,46 +1,47 @@
-.DivOpcaoo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    margin-top: -570px;
-  }
-  
-  .input-field {
-    width: 250px;
-    padding: 12px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input-field:focus {
-    border-color: #BF335D;
-    box-shadow: 0 0 5px#BF335D;
-  }
-  
-  .button-option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #dc3545;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button-option:hover {
-    opacity: 0.9;
-  }
-  
-  
+.container-excluir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Ajusta a altura para centralizar verticalmente */
+  margin-top: -850px;
+}
+
+.excluir-box {
+  background-color: #bf335d;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.excluir-box h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.excluir-box input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.excluir-box button {
+  background-color: #bf335d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+ 
+}
+
+

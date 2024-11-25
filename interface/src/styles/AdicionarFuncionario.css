@@ -1,45 +1,64 @@
-.DivAdicionar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    margin-top: -570px;
-  }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: -760px;
+ 
   
-  .input-field {
-    width: 250px;
-    padding: 12px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
   
-  .input-field:focus {
-    border-color: #BF335D;
-    box-shadow: 0 0 5px#BF335D;
-  }
-  
-  .button-option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #dc3545;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button-option:hover {
-    opacity: 0.9;
-  }
-  
+}
+
+.addfunc {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.funcionario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #bf335d;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+ .btn-adiconarfunc {
+  background-color: #bf335d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #a82e4f;
+  transform: scale(1.05);
+}
+.pontoajeitar{
+  color: #bf335d;
+  margin-top: 10px;
+}

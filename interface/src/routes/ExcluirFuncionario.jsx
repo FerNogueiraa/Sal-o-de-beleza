@@ -4,10 +4,16 @@ import Footer from "../components/footer";
 import "../styles/ExcluirFuncionario.css";
 
 export default function ExcluirFuncionario() {
-  const [nomeFuncionario, setNomeFuncionario] = useState("");
+  const [cpf, setCpf] = useState("");
 
   const handleInputChange = (e) => {
-    setNomeFuncionario(e.target.value);
+    setCpf(e.target.value);
+  };
+
+  const handleDelete = () => {
+    // Lógica para excluir funcionário pelo CPF
+    alert(`Funcionário com CPF ${cpf} foi excluído.`);
+    setCpf(""); // Limpa o campo de CPF após a exclusão
   };
 
   return (
@@ -16,17 +22,17 @@ export default function ExcluirFuncionario() {
         <Nav />
       </div>
 
-      <div className="DivOpcaoo">
-        <input
-          type="text"
-          className="input-field"
-          placeholder="Digite o nome do funcionário"
-          value={nomeFuncionario}
-          onChange={handleInputChange}
-        />
-        <button className="button-option delete-employee">
-          Excluir Funcionário
-        </button>
+      <div className="container-excluir">
+        <div className="excluir-box">
+          <h2>Excluir Funcionário</h2>
+          <input
+            type="text"
+            placeholder="Digite o CPF"
+            value={cpf}
+            onChange={handleInputChange}
+          />
+          <button onClick={handleDelete}>Excluir Funcionário</button>
+        </div>
       </div>
 
       <div className="footer-position">
