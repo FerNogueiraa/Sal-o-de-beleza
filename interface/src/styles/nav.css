@@ -26,7 +26,8 @@
 .content-left {
   display: flex;
   align-items: center;
-  gap: 30px;
+  padding-top: 5px;
+  gap: 0px;
 }
 
 .routes {

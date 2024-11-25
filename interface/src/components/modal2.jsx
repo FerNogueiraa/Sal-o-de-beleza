@@ -23,7 +23,7 @@ export default function Modal2({ children, image }) {
             <br />
             <p className="menor1">Venha conferir nosso atendimento</p>
             <p className="menor2"><strong>qualificado</strong>, e onde for ira fazer <strong>sucesso</strong></p>
-            <button className="Botao-Home" >AGENDE SEU HORÁRIO</button>
+            <button className="Botao-Home">AGENDE SEU HORÁRIO</button>
             <img className="imagem-home" src={women2} alt="Imagem" />
             <p className="Pontodoespaco">.</p>
         </div>
@@ -41,6 +41,17 @@ export default function Modal2({ children, image }) {
         <p className="nome1">Limpeza de Pele</p>
         <p className="nome2">Micropigmentação</p>
         <p className="nome3">Design de Sobrancelha</p>
+        <br />
+                {/* Botão Saiba Mais */}
+                <div className="div-btn-saibamais">
+          <Link to="/servicos">
+            <button className="btn-saibamais">SAIBA MAIS</button>
+          </Link>
+        </div>
+
+
+
+
         <br />
         <br />
         <br />
