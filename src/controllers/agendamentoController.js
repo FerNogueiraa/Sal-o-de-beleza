@@ -84,27 +84,49 @@ const agendamentoController = {
   },
 
   listarAgendamentosPorData: async (req, res) => {
+    const { date } = req.query;
+    console.log('Data recebida para consulta:', date);
+  
+    if (!date) {
+      return res.status(400).json({ error: 'Data inválida fornecida' });
+    }
+  
     try {
-      const { data } = req.query;
-      const dataConsulta = new Date(data);
-
+      const dataInicio = new Date(date);
+      dataInicio.setUTCHours(0, 0, 0, 0);
+  
+      const dataFim = new Date(dataInicio);
+      dataFim.setUTCHours(23, 59, 59, 999);
+  
       const agendamentos = await prisma.agendamento.findMany({
         where: {
-          data: dataConsulta
+          data: {
+            gte: dataInicio,
+            lte: dataFim,
+          },
         },
-        select: {
-          horario: true
+        include: {
+          cliente: {
+            select: { nome: true }
+          },
+          servico: {
+            select: { nome: true }
+          },
+          profissional: {
+            select: { nome: true }
+          }
         }
       });
-
-      const horariosOcupados = agendamentos.map(a => a.horario);
-
-      res.json(horariosOcupados);
+  
+      console.log('Agendamentos encontrados:', agendamentos);
+      res.status(200).json(agendamentos);
     } catch (error) {
       console.error('Erro ao listar agendamentos:', error);
       res.status(500).json({ error: 'Erro ao listar agendamentos' });
     }
   },
+
+
   listarServicos: async (req, res) => {
     try {
       const servicos = await prisma.servico.findMany();
