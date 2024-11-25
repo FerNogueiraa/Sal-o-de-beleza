@@ -29,7 +29,6 @@ function Login() {
     setError("");
 
     console.log("Iniciando processo de login...");
-    console.log("Dados de login:", { usuario: usuario.length > 0 ? "preenchido" : "vazio", senha: senha.length > 0 ? "preenchida" : "vazia" });
 
     if (!usuario || !senha) {
       console.log("Erro: Campos não preenchidos");
@@ -41,15 +40,21 @@ function Login() {
       console.log("Enviando requisição de login...");
       const response = await api.post('/api/login', { usuario, senha });
       
+      const {token, clienteId, tipoUsuario} = response.data;
+
       console.log('Login bem-sucedido. Resposta do servidor:', {
         status: response.status,
         tokenRecebido: !!response.data.token,
         clienteIdRecebido: !!response.data.clienteId
       });
       
-      login(response.data.token);
-      localStorage.setItem('userId', response.data.clienteId);
+      login(token,clienteId,tipoUsuario);
       
+      console.log("token:", localStorage.getItem('token'))
+      console.log('userId', localStorage.getItem('userId'))
+      console.log('tipoUsuario:', localStorage.getItem('tipoUsuario'))
+
+
       console.log("Redirecionando para a página de Agendamento...");
       navigate('/Agendamento');
     } catch (error) {

@@ -22,7 +22,7 @@ const MeusAgendamentos = ({ isOpen, onClose }) => {
     try {
       const response = await fetch(`http://localhost:3000/api/agendamentos-cliente/${userId}`, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}` 
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
       });
       if (!response.ok) {
