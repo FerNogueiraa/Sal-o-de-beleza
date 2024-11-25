@@ -12,6 +12,12 @@ import Agendamento from './routes/agendamento.jsx';
 import Agendamentoadm from './routes/agendamentoadm.jsx'
 import ErrorPage from './routes/ErrorPage.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
+import MenuOpcao from './routes/Menuopcao.jsx'
+import ExcluirFuncionario from './routes/ExcluirFuncionario.jsx'
+import AdicionarFuncionario from './routes/AdicionarFuncionario.jsx'
+import Servicos from './routes/Servicos.jsx'
+import FuncionarioPage from './routes/PaginaFuncionario.jsx'
+import FinanceiroPage from './routes/Financeiro.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,11 +42,39 @@ const router = createBrowserRouter([
         element: <Agendamentoadm/>,
       },
       {
+        path: "Menuopcao",
+        element: <MenuOpcao/>,
+      },
+      {
+        path: "ExcluirFuncionario",
+        element: <ExcluirFuncionario/>,
+      },
+      {
+        path: "AdicionarFuncionario",
+        element: <AdicionarFuncionario/>,
+      },
+      {
+        path: "Servicos",
+        element: <Servicos/>,
+      },
+      {
+        path: "PaginaFuncionario",
+        element: <FuncionarioPage/>,
+      },
+      {
+        path: "Financeiro",
+        element: <FinanceiroPage/>,
+      },
+      {
         element: <PrivateRoute />,
         children: [
           {
             path: "agendamento",
             element: <Agendamento />
+          },
+          {
+            path: "agendamentoadm",
+            element: <Agendamentoadm />
           }
         ]
       }

@@ -1,40 +1,41 @@
 import React from "react";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import { Instagram } from "lucide-react";
 import "../styles/footer.css";
+import { FaInstagram, FaWhatsapp, FaFacebook } from 'react-icons/fa'; // Importação dos ícones
 
 export default function Footer() {
   return (
     <div className="footer">
       <div className="up-content">
-        <h1 className="title footer">Sandra Sobrancelhas</h1>
         <div className="media-social">
           <h3>Redes Sociais</h3>
           <div className="anchor-media">
-            <a href="https://www.facebook.com/sandra.wanderlindfrassetto" target='_blank' rel='noopener noreferrer' className="facebook"> 
-              <FacebookOutlinedIcon />
+            
+          <a href="https://www.instagram.com/sandra.sobrancelhas" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={80} color="#fff" />
+              <span>@sandra.sobrancelhas</span>
             </a>
-            <a className="whatssap">
-              <WhatsAppIcon />
+            <a href="https://wa.me/48999980725" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp size={80} color="#fff" />
+              <span>(48)99998-0725</span>
             </a>
-            <a href="https://www.instagram.com/sandra.sobrancelhas/" target='_blank' rel='noopener noreferrer' className="instagram">
-              <Instagram />
+            <a href="https://www.facebook.com/sandrasobrancelhas" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={80} color="#fff" />
+              <span>Sandra sobrancelhas </span>
             </a>
+            
           </div>
-          <a href="tel:+4899806-4511">
-            <p>(48)99806-4511</p>
-          </a>
+          
         </div>
       </div>
       <div className="bottom-content">
-        <span className="direitos">
-          <a href="">Termos</a>
-          <a href="">Privacidade</a>
-          <a href="">Cookies</a>
-        </span>
-        <span className="line"></span>
+        <ul className="Direitos">
+          <li>Termos</li>
+          <li>Cookies</li>
+          <li>Privacidade</li>
+        </ul>
+        
       </div>
+      <p className="Ponto">.</p>
     </div>
   );
 }

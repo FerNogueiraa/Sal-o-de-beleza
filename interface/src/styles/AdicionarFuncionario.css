@@ -1,0 +1,64 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: -760px;
+ 
+  
+  
+}
+
+.addfunc {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.funcionario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #bf335d;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+ .btn-adiconarfunc {
+  background-color: #bf335d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #a82e4f;
+  transform: scale(1.05);
+}
+.pontoajeitar{
+  color: #bf335d;
+  margin-top: 10px;
+}

@@ -44,24 +44,47 @@ export default function Cadastro() {
         <h1>Cadastrar</h1>
         <label>
           Nome:
-          <input  className='input' name='nome' type='text' placeholder='Nome' ref={inputNome} required />
+          <input  className='input' name='nome' type='text'  ref={inputNome} required />
 
 
         </label>
         <label>
           Usuário:
-          <input  className='input' name='usuario' type='text' placeholder='Usuario' ref={inputUsuario} required />
+          <input  className='input' name='usuario' type='text'  ref={inputUsuario} required />
         </label>
         <label>
           Senha:
-          <input className='input' name='senha' type='password' placeholder='Senha' ref={inputSenha}  required/>
+          <input className='input' name='senha' type='password'  ref={inputSenha}  required/>
         </label>
         <label>
           Telefone:
-          <input className='input' name='telefone' type='text' placeholder='Telefone' ref={inputTelefone} required/>
+          <input className='input' name='telefone' type='text'  ref={inputTelefone} required/>
         </label>
         <button type="button" className="btn-cadastro" onClick={createUser}>Cadastrar</button>
       </Modal>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="footer-position">
         <Footer />
       </div>

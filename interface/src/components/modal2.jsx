@@ -3,7 +3,8 @@ import "../styles/modal2.css";
 import limpeza from "../assets/limpeza.jpg";
 import micropigmentacao from "../assets/micropigmentacao.jpg";
 import design from "../assets/design.jpg";
-import imghistoria from "../assets/imghistoria.png"
+import imghistoria from "../assets/imghistoria.png";
+import women2 from "../assets/women2.png";
 import { Link } from "react-router-dom";
 import Agendamento from "../routes/agendamento";
 
@@ -14,18 +15,20 @@ export default function Modal2({ children, image }) {
     <>
     
       <div className="content-modal2">
-          <div className="content-image2">
+  
           <div className="texto-home">
             <p className="maioresquerda1">Um Visual mais que </p>
             <p className="maior">inovador é sua beleza </p>
             <p className="maioresquerda2">conosco </p>
-            <p className="menor1">Venha conferir nosso</p>
-            <p className="menor2">atendimento qualificado, e </p>
-            <p className="menor">faça sucesso por onde for</p>
-            <button  className='btn-agendar2' ><a href="Agendamento">Agendar</a></button>
+            <br />
+            <p className="menor1">Venha conferir nosso atendimento</p>
+            <p className="menor2"><strong>qualificado</strong>, e onde for ira fazer <strong>sucesso</strong></p>
+            <h2 className="Botao-Home" >AGENDE SEU HORÁRIO</h2>
+            <img className="imagem-home" src={women2} alt="Imagem" />
+            <p className="Pontodoespaco">.</p>
         </div>
-            <img className="image-women2" src={image} alt="Imagem" />
-        </div>
+           
+       
         
         </div>
         <h1 className="servico">SERVIÇOS</h1>
@@ -38,22 +41,32 @@ export default function Modal2({ children, image }) {
         <p className="nome1">Limpeza de Pele</p>
         <p className="nome2">Micropigmentação</p>
         <p className="nome3">Design de Sobrancelha</p>
+        <br />
+                {/* Botão Saiba Mais */}
+                <div className="div-btn-saibamais">
+          <Link to="/servicos">
+            <button className="btn-saibamais">SAIBA MAIS</button>
+          </Link>
+        </div>
 
-        <h1 className="Historia">HISTÓRIA</h1>
+        <br />
+        <br />
+        <br />
+        <br />
 
         <div className="div-historia">
-        <img className="imagem-historia" src={imghistoria} alt="Imagem" />
-
         <div className="div-menorescrita">
+        <h1 className="Historia">HISTÓRIA</h1>
         <p className="escrita-historia">Em 2004, Sandra começou a trabalhar com design de sobrancelhas em casa, dedicando-se com paixão e atenção aos detalhes. Seu trabalho logo ganhou fama, e a demanda cresceu tanto que, em 2013, ela abriu seu próprio estúdio. Hoje, Sandra Sobrancelhas é um local renomado, conhecido pela qualidade excepcional e pelo atendimento acolhedor, refletindo o amor e a dedicação de Sandra ao seu ofício.</p>
         </div>
+        <img className="imagem-historia" src={imghistoria} alt="Imagem" />
         </div>
         <h1 className="feedback">FEEDBACK</h1>
 
         <div className="div-feedback">
           <div className="divfeed1">
             <h2 className="retis1">"</h2>
-            <h2 className="karen">Karinelli Mariot Giusti</h2>
+            <h2 className="karen">Karinelli Mariot </h2>
             
             <div className="divkaren">
             

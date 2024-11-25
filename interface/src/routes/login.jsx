@@ -99,6 +99,29 @@ function Login() {
         <Link to="/Cadastro">Não possui conta?</Link>
         <button type="submit" className="btn-login">Entrar</button>
       </Modal>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="footer-position">
         <Footer />
       </div>

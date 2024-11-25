@@ -9,12 +9,13 @@
 }
 .btn-cadastro{
     border: 2px solid #BF335D;
-    width: 100px;
+    width: 120px;
     height: 40px;
     background-color: #751f39;
     border-radius: 4px;
     text-transform: uppercase;
     color: #FFFFFF;
+    text-align: center;
 }
 
 .input {
@@ -33,4 +34,6 @@
     border: 0 none;
     outline: 0;
 }
+
+
 
